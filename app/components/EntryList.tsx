@@ -26,7 +26,7 @@ export default function EntryList({ entries }: EntryListProps) {
       <h2 className="text-lg font-semibold text-gray-900 mb-4">
         Last 30 Entries
       </h2>
-      <table className="w-full text-sm text-left">
+      <table className="w-full text-sm text-left text-gray-900">
         <thead>
           <tr className="border-b border-gray-200 text-gray-500">
             <th className="py-2 pr-4">Date</th>
