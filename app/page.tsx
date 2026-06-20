@@ -25,7 +25,7 @@ export default function Home() {
       setEntries(JSON.parse(stored));
     }
   }, []);
-  
+
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
 
@@ -58,12 +58,12 @@ export default function Home() {
   }
 
   return (
-    <main className="min-h-screen bg-gray-50 p-6">
+    <main className="min-h-screen bg-gray-50 p-6 flex flex-col items-center">
       <h1 className="text-2xl font-bold text-gray-900 mb-6">
         Habit Tracker
       </h1>
 
-      <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow p-6 max-w-xl space-y-4">
+      <form onSubmit={handleSubmit} className="bg-white rounded-lg shadow p-6 w-full max-w-xl space-y-4">
         {/* Date */}
         <div>
           <label className="block text-sm font-medium text-gray-700 mb-1">
@@ -73,10 +73,9 @@ export default function Home() {
             type="date"
             value={date}
             onChange={(e) => setDate(e.target.value)}
-            className="border border-gray-300 rounded px-3 py-2 w-full"
+            className="border border-gray-300 rounded px-3 py-2 text-gray-900 bg-white w-full"
           />
-
-          </div>
+        </div>
 
         {/* Sleep hours */}
         <div>
@@ -89,7 +88,7 @@ export default function Home() {
             placeholder="e.g. 7.5"
             value={sleepHours}
             onChange={(e) => setSleepHours(e.target.value)}
-            className="border border-gray-300 rounded px-3 py-2 w-full"
+            className="border border-gray-300 rounded px-3 py-2 text-gray-900 bg-white w-full"
           />
         </div>
 
@@ -103,7 +102,7 @@ export default function Home() {
             onChange={(e) =>
               setCalorieLevel(e.target.value as "under" | "at" | "over")
             }
-            className="border border-gray-300 rounded px-3 py-2 w-full"
+            className="border border-gray-300 rounded px-3 py-2 text-gray-900 bg-white w-full"
           >
             <option value="under">Under maintenance</option>
             <option value="at">At maintenance</option>
@@ -116,7 +115,7 @@ export default function Home() {
               placeholder="Calorie amount"
               value={calorieAmount}
               onChange={(e) => setCalorieAmount(e.target.value)}
-              className="border border-gray-300 rounded px-3 py-2 w-full mt-2"
+              className="border border-gray-300 rounded px-3 py-2 text-gray-900 bg-white w-full mt-2"
             />
           )}
         </div>
@@ -131,7 +130,7 @@ export default function Home() {
             placeholder="e.g. 90"
             value={screenTimeMinutes}
             onChange={(e) => setScreenTimeMinutes(e.target.value)}
-            className="border border-gray-300 rounded px-3 py-2 w-full"
+            className="border border-gray-300 rounded px-3 py-2 text-gray-900 bg-white w-full"
           />
         </div>
 
@@ -168,7 +167,7 @@ export default function Home() {
             placeholder="What did you produce? (optional)"
             value={producedDescription}
             onChange={(e) => setProducedDescription(e.target.value)}
-            className="border border-gray-300 rounded px-3 py-2 w-full mt-2"
+            className="border border-gray-300 rounded px-3 py-2 text-gray-900 bg-white w-full mt-2"
             rows={2}
           />
         </div>
