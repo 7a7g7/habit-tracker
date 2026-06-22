@@ -10,6 +10,7 @@ export type Entry = {
   caloriesEaten?: number;
   steps?: number;
   liftedToday?: boolean;
+  insight?: string;
 };
 
 export type UserSettings = {
