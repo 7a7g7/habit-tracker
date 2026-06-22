@@ -35,6 +35,7 @@ export default function EntryList({ entries }: EntryListProps) {
             <th className="py-2 pr-4">Screen Time</th>
             <th className="py-2 pr-4">Produced</th>
             <th className="py-2 pr-4">Mood</th>
+            <th className="py-2 pr-4">Insight</th>
           </tr>
         </thead>
         <tbody>
@@ -51,6 +52,7 @@ export default function EntryList({ entries }: EntryListProps) {
                 {entry.producedSomething ? "Yes" : "No"}
               </td>
               <td className="py-2 pr-4">{entry.mood}/5</td>
+              <td className="py-2 pr-4">{entry.insight ?? "—"}</td>
             </tr>
           ))}
         </tbody>

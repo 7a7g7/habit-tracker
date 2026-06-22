@@ -55,6 +55,11 @@ export default function DayView({ entries }: DayViewProps) {
           <p>
             <span className="font-medium">Mood:</span> {match.mood}/5
           </p>
+          {match.insight && (
+            <p>
+              <span className="font-medium">Insight:</span> {match.insight}
+            </p>
+          )}
         </div>
       )}
     </div>
